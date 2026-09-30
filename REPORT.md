@@ -54,6 +54,81 @@ The experiment used a 3 x 4 contract grid:
 The primary metric is the proportion of responses passing their full A x B
 contract. Individual checks are also reported for diagnosis.
 
+### 1.1 Three concrete passing examples
+
+These abbreviated examples show what the evaluator means by a fully correct
+response. They illustrate the structure being scored rather than reproduce a
+complete benchmark prompt.
+
+**A1 + B1: return the document directly with exactly one Python example**
+
+~~~~~~text
+# Addition example
+
+```python
+def add(a, b):
+    return a + b
+```
+~~~~~~
+
+There is no outer wrapper, the fences are balanced, and exactly one Python
+fence is present.
+
+**A2 + B2: use the required outer wrapper and show raw Markdown source**
+
+~~~~~~text
+````markdown
+# Logging example
+
+```javascript
+console.log("Hello");
+```
+
+## Raw Markdown source
+
+~~~~markdown
+```javascript
+console.log("Hello");
+```
+~~~~
+````
+~~~~~~
+
+The whole document is inside one four-backtick `markdown` fence. It contains a
+JavaScript example and a separate raw-source block showing the literal fence
+markup.
+
+**A3 + B4: compose multiple structural requirements**
+
+~~~~~~text
+# Ruby implementation guide
+
+1. Review the interface.
+2. Implement the method.
+3. Run the tests.
+
+> Follow the documented conventions. — [Ruby documentation](https://www.ruby-lang.org/en/documentation/)
+
+```ruby
+def greet(name)
+  "Hello, #{name}"
+end
+```
+
+```ruby
+raise "Test failed" unless greet("Sam") == "Hello, Sam"
+```
+
+| Artifact | Purpose |
+| --- | --- |
+| Implementation | Defines the behavior |
+| Test | Verifies the result |
+~~~~~~
+
+A3 leaves the outer wrapper unspecified. B4 still requires at least two
+language-specific code examples, a table, a cited blockquote, and a numbered
+list. Removing any one of them makes the entire response incorrect.
+
 ## 2. Reproducible evaluation contract
 
 The following elements were frozen before comparing model versions:

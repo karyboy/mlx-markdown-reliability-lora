@@ -29,6 +29,44 @@ The base model scored **20/240 (8.33%)**. Broad Run 1 SFT reached **77/240
 on the same frozen external prompts: a 74.17-point absolute gain and a 9.9x
 relative improvement over the base model.
 
+## What counts as correct?
+
+Each evaluation prompt requested a specific Markdown structure. A response
+counted as correct only when it satisfied **every** requested rule. For example,
+consider this abbreviated instruction:
+
+> Include exactly one fenced Python example. Wrap the entire Markdown document
+> in one outer four-backtick fence labeled `markdown`.
+
+A passing response has both the Python example and the required outer wrapper:
+
+~~~~~~text
+````markdown
+# Example
+
+```python
+print("hello")
+```
+````
+~~~~~~
+
+This similar-looking response fails because the outer four-backtick wrapper is
+missing:
+
+~~~~~~text
+# Example
+
+```python
+print("hello")
+```
+~~~~~~
+
+The evaluator checks parse success, balanced fences, wrapper policy,
+language-specific code fences, visible raw Markdown source, tables, cited
+blockquotes, and numbered lists as required by each prompt. One failed check
+makes the response incorrect. It does not judge whether the programming example
+is semantically correct.
+
 ![Full structural contract pass rate](assets/experiment-results.svg)
 
 Read the full methodology, failure analysis, and Run 2 design in
