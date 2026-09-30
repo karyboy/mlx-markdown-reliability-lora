@@ -34,6 +34,34 @@ Run 1 SFT and **82.50%** after the targeted Run 2 correction.
 | Run 1 broad SFT | 77/240 | 32.08% |
 | Run 2 targeted booster | 198/240 | **82.50%** |
 
+## What the 82.50% measures
+
+Each evaluation prompt specified a Markdown contract. A response counted as
+correct only if every requested structural rule passed. For example, this
+instruction requires both a Python code fence and an outer four-backtick
+`markdown` wrapper:
+
+> Include exactly one fenced Python example. Wrap the entire Markdown document
+> in one outer four-backtick fence labeled `markdown`.
+
+A passing response looks like this:
+
+~~~~~~text
+````markdown
+# Example
+
+```python
+print("hello")
+```
+````
+~~~~~~
+
+Returning the same inner document without the outer four-backtick wrapper is a
+failure. The local evaluator also checks balanced fences, language labels, raw
+Markdown source, tables, cited blockquotes, and numbered lists when the prompt
+requires them. This is structural-contract accuracy, not a judgment of whether
+the programming example is semantically correct.
+
 The full experiment, source code, evaluator, generated-data pipeline, configs,
 and report are available at
 [`karyboy/mlx-markdown-reliability-lora`](https://github.com/karyboy/mlx-markdown-reliability-lora).
