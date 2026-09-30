@@ -1,0 +1,86 @@
+{
+  "by_axis_cell": {
+    "A1_B1": {
+      "count": 6,
+      "pass_rate": 1.0,
+      "passed": 6
+    },
+    "A1_B2": {
+      "count": 6,
+      "pass_rate": 0.5,
+      "passed": 3
+    },
+    "A1_B3": {
+      "count": 6,
+      "pass_rate": 0.16666666666666666,
+      "passed": 1
+    },
+    "A1_B4": {
+      "count": 6,
+      "pass_rate": 0.8333333333333334,
+      "passed": 5
+    },
+    "A2_B1": {
+      "count": 18,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A2_B2": {
+      "count": 18,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A2_B3": {
+      "count": 18,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A2_B4": {
+      "count": 18,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A3_B1": {
+      "count": 6,
+      "pass_rate": 1.0,
+      "passed": 6
+    },
+    "A3_B2": {
+      "count": 6,
+      "pass_rate": 0.5,
+      "passed": 3
+    },
+    "A3_B3": {
+      "count": 6,
+      "pass_rate": 0.3333333333333333,
+      "passed": 2
+    },
+    "A3_B4": {
+      "count": 6,
+      "pass_rate": 0.5,
+      "passed": 3
+    }
+  },
+  "check_pass_rates": {
+    "balanced_fences": 1.0,
+    "blockquote_with_citation": 0.975,
+    "language_code_examples": 0.725,
+    "numbered_list": 1.0,
+    "outer_wrapper": 0.4,
+    "parse_success": 1.0,
+    "raw_markdown_source": 0.7166666666666667,
+    "table": 1.0
+  },
+  "count": 120,
+  "failure_counts": {
+    "blockquote_with_citation": 3,
+    "language_code_examples": 33,
+    "outer_wrapper": 72,
+    "raw_markdown_source": 34
+  },
+  "full_structural_contract_pass_rate": 0.24166666666666667,
+  "scoring_method": {
+    "description": "Deterministic parser- and prompt-contract-based scoring written for this experiment. It does not assess arbitrary task-answer semantic correctness and is not LatentMD's authors' official evaluator.",
+    "name": "local_structural_contract_v1"
+  }
+}

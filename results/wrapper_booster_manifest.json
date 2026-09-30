@@ -1,0 +1,84 @@
+{
+  "all_targets_programmatically_verified": true,
+  "dataset_version": "wrapper_booster_v1",
+  "design": "Short exact-wording generation examples with matched A1/A2 contrast pairs; A2 is oversampled 3:1 relative to each control axis.",
+  "files": {
+    "train": {
+      "path": "data/processed/wrapper_booster/train.jsonl",
+      "sha256": "905224cc70140101fbffe9eda2601a682bc1337cfa2a68bb4c585dfff24ff6cf"
+    },
+    "valid": {
+      "path": "data/processed/wrapper_booster/valid.jsonl",
+      "sha256": "f2ba93402b99641a3bfde5d8690251818d1b0b8615f0236b5df12c27404d8ada"
+    }
+  },
+  "leakage_audit": {
+    "target_hash_overlap": [],
+    "task_family_overlap": []
+  },
+  "seed": 20260929,
+  "train": {
+    "axis_a": {
+      "A1": 120,
+      "A2": 360,
+      "A3": 120
+    },
+    "axis_b": {
+      "B1": 150,
+      "B2": 150,
+      "B3": 150,
+      "B4": 150
+    },
+    "contrast_pairs": 120,
+    "examples": 600,
+    "languages": {
+      "C++": 66,
+      "Go": 84,
+      "Java": 80,
+      "JavaScript": 66,
+      "Ruby": 63,
+      "Rust": 75,
+      "Shell": 80,
+      "TypeScript": 86
+    },
+    "maximum_target_characters": 3180,
+    "task_families": 155,
+    "task_types": {
+      "generation": 480,
+      "repair": 60,
+      "transformation": 60
+    },
+    "unique_targets": 600
+  },
+  "valid": {
+    "axis_a": {
+      "A1": 24,
+      "A2": 72,
+      "A3": 24
+    },
+    "axis_b": {
+      "B1": 30,
+      "B2": 30,
+      "B3": 30,
+      "B4": 30
+    },
+    "contrast_pairs": 24,
+    "examples": 120,
+    "languages": {
+      "C++": 12,
+      "Go": 12,
+      "Java": 21,
+      "JavaScript": 21,
+      "Ruby": 13,
+      "Rust": 9,
+      "Shell": 10,
+      "TypeScript": 22
+    },
+    "maximum_target_characters": 2687,
+    "task_families": 35,
+    "task_types": {
+      "generation": 120
+    },
+    "unique_targets": 120
+  }
+}

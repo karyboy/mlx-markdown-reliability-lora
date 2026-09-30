@@ -1,0 +1,16 @@
+{
+  "all_targets_verified": true,
+  "count": 500,
+  "failures": 0,
+  "reused_target_instances": 0,
+  "task_counts": {
+    "generation": 300,
+    "repair": 150,
+    "transformation": 50
+  },
+  "topic_overlap": [],
+  "train_count": 450,
+  "unique_ids": 500,
+  "unique_targets": 500,
+  "valid_count": 50
+}

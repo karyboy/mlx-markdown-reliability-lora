@@ -1,0 +1,23 @@
+{
+  "cell_counts": {
+    "A1_B1": 20,
+    "A1_B2": 20,
+    "A1_B3": 20,
+    "A1_B4": 20,
+    "A2_B1": 20,
+    "A2_B2": 20,
+    "A2_B3": 20,
+    "A2_B4": 20,
+    "A3_B1": 20,
+    "A3_B2": 20,
+    "A3_B3": 20,
+    "A3_B4": 20
+  },
+  "count": 240,
+  "dataset": "latentmd-neurips26/LatentMD",
+  "dataset_revision": "30fa204394b7214501ddc280a198c26fccf166df",
+  "prompt_ids_sha256": "548555abd2bf4b86fba582e93917f1160629b5a7d36b51017693a6f5ab2c4f74",
+  "selection": "20 prompts sampled without replacement from each A×B main-grid cell",
+  "selection_seed": 20260919,
+  "source_file": "prompts/priority/main_prompts.yaml"
+}

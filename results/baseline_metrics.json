@@ -1,0 +1,89 @@
+{
+  "by_axis_cell": {
+    "A1_B1": {
+      "count": 20,
+      "pass_rate": 0.1,
+      "passed": 2
+    },
+    "A1_B2": {
+      "count": 20,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A1_B3": {
+      "count": 20,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A1_B4": {
+      "count": 20,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A2_B1": {
+      "count": 20,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A2_B2": {
+      "count": 20,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A2_B3": {
+      "count": 20,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A2_B4": {
+      "count": 20,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A3_B1": {
+      "count": 20,
+      "pass_rate": 0.7,
+      "passed": 14
+    },
+    "A3_B2": {
+      "count": 20,
+      "pass_rate": 0.15,
+      "passed": 3
+    },
+    "A3_B3": {
+      "count": 20,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A3_B4": {
+      "count": 20,
+      "pass_rate": 0.05,
+      "passed": 1
+    }
+  },
+  "check_pass_rates": {
+    "balanced_fences": 0.9208333333333333,
+    "blockquote_with_citation": 0.775,
+    "language_code_examples": 0.26666666666666666,
+    "numbered_list": 0.9625,
+    "outer_wrapper": 0.38333333333333336,
+    "parse_success": 1.0,
+    "raw_markdown_source": 0.6541666666666667,
+    "table": 0.9708333333333333
+  },
+  "count": 240,
+  "failure_counts": {
+    "balanced_fences": 19,
+    "blockquote_with_citation": 54,
+    "language_code_examples": 176,
+    "numbered_list": 9,
+    "outer_wrapper": 148,
+    "raw_markdown_source": 83,
+    "table": 7
+  },
+  "full_structural_contract_pass_rate": 0.08333333333333333,
+  "scoring_method": {
+    "description": "Deterministic parser- and prompt-contract-based scoring written for this experiment. It does not assess arbitrary task-answer semantic correctness and is not LatentMD's authors' official evaluator.",
+    "name": "local_structural_contract_v1"
+  }
+}

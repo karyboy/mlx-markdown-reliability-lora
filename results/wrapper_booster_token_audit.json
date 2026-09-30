@@ -1,0 +1,28 @@
+{
+  "chat_template": "tokenizer.apply_chat_template(add_generation_prompt=False)",
+  "configured_max_seq_length": 1280,
+  "model": {
+    "id": "mlx-community/Qwen2.5-Coder-3B-Instruct-4bit",
+    "revision": "3dd939c621c08e5753d5b89f35a2642cd83b98ca"
+  },
+  "splits": {
+    "train": {
+      "above_configured_max": 0,
+      "count": 600,
+      "max_tokens": 1150,
+      "median_tokens": 230,
+      "min_tokens": 88,
+      "p95_tokens": 523,
+      "p99_tokens": 766
+    },
+    "valid": {
+      "above_configured_max": 0,
+      "count": 120,
+      "max_tokens": 958,
+      "median_tokens": 224,
+      "min_tokens": 103,
+      "p95_tokens": 415,
+      "p99_tokens": 669
+    }
+  }
+}

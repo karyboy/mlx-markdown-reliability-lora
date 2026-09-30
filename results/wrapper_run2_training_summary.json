@@ -1,0 +1,25 @@
+{
+  "adapter": "adapters/qwen25-coder-3b-markdown-reliability-wrapper-run2",
+  "adapter_sha256": "a892954dbf11822d6f4ab1ef50328b6ade8ca3fad072b8706eb319dfaa27e5d5",
+  "adapter_size_bytes": 119789457,
+  "base_adapter": "adapters/qwen25-coder-3b-markdown-reliability-lora/adapters.safetensors",
+  "batch_size": 2,
+  "effective_batch_size": 8,
+  "final_iteration": 300,
+  "final_reported_train_loss": 0.176,
+  "final_validation_loss": 0.266,
+  "grad_accumulation_steps": 4,
+  "learning_rate": 2e-06,
+  "optimizer_updates": 75,
+  "trained_tokens": 91031,
+  "training_example_presentations": 600,
+  "validation_loss_curve": {
+    "1": 1.334,
+    "50": 0.526,
+    "100": 0.406,
+    "150": 0.326,
+    "200": 0.288,
+    "250": 0.273,
+    "300": 0.266
+  }
+}

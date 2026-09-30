@@ -1,0 +1,117 @@
+{
+  "all_targets_programmatically_verified": true,
+  "contract_grid": {
+    "A": [
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "B": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ]
+  },
+  "dataset_version": "markdown_sft_v1",
+  "files": {
+    "train": {
+      "path": "data/processed/final/train.jsonl",
+      "sha256": "9ce931300b13586b27041b4ef698fcc420031e92bdd616fb0c4aca71311b3f19"
+    },
+    "valid": {
+      "path": "data/processed/final/valid.jsonl",
+      "sha256": "287a65a7b1ce989b2db0c95309f3a6ef8fc86a7f741e1b9fd100a58ef7da2bd1"
+    }
+  },
+  "leakage_audit": {
+    "target_hash_overlap": [],
+    "task_family_overlap": []
+  },
+  "seed": 20260923,
+  "source_content_plan_manifest": "data/processed/content_plans/manifest.json",
+  "train": {
+    "axis_cells": {
+      "A1_B1": 417,
+      "A1_B2": 417,
+      "A1_B3": 417,
+      "A1_B4": 416,
+      "A2_B1": 416,
+      "A2_B2": 416,
+      "A2_B3": 417,
+      "A2_B4": 417,
+      "A3_B1": 417,
+      "A3_B2": 417,
+      "A3_B3": 417,
+      "A3_B4": 416
+    },
+    "corruptions": {
+      "citation": 91,
+      "code_language": 715,
+      "numbered_list": 88,
+      "outer_wrapper": 179,
+      "raw_source": 341,
+      "table": 86
+    },
+    "examples": 5000,
+    "languages": {
+      "C++": 634,
+      "Go": 621,
+      "Java": 645,
+      "JavaScript": 613,
+      "Ruby": 633,
+      "Rust": 594,
+      "Shell": 637,
+      "TypeScript": 623
+    },
+    "task_families": 160,
+    "task_types": {
+      "generation": 3000,
+      "repair": 1500,
+      "transformation": 500
+    },
+    "unique_targets": 5000
+  },
+  "valid": {
+    "axis_cells": {
+      "A1_B1": 41,
+      "A1_B2": 42,
+      "A1_B3": 41,
+      "A1_B4": 42,
+      "A2_B1": 42,
+      "A2_B2": 42,
+      "A2_B3": 42,
+      "A2_B4": 42,
+      "A3_B1": 41,
+      "A3_B2": 42,
+      "A3_B3": 41,
+      "A3_B4": 42
+    },
+    "corruptions": {
+      "citation": 13,
+      "code_language": 74,
+      "numbered_list": 5,
+      "outer_wrapper": 18,
+      "raw_source": 33,
+      "table": 7
+    },
+    "examples": 500,
+    "languages": {
+      "C++": 60,
+      "Go": 68,
+      "Java": 56,
+      "JavaScript": 64,
+      "Ruby": 58,
+      "Rust": 73,
+      "Shell": 63,
+      "TypeScript": 58
+    },
+    "task_families": 40,
+    "task_types": {
+      "generation": 300,
+      "repair": 150,
+      "transformation": 50
+    },
+    "unique_targets": 500
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "count": 240,
+  "evaluation": "Frozen 240-prompt LatentMD subset scored with local_structural_contract_v1",
+  "runs": {
+    "base": {
+      "full_contract_pass_rate": 0.08333333333333333,
+      "passed": 20
+    },
+    "run1_broad_sft": {
+      "full_contract_pass_rate": 0.32083333333333336,
+      "passed": 77
+    },
+    "run2_wrapper_booster": {
+      "full_contract_pass_rate": 0.825,
+      "passed": 198
+    }
+  },
+  "run2_axis_results": {
+    "A1": {
+      "count": 80,
+      "full_contract_pass_rate": 0.825,
+      "passed": 66
+    },
+    "A2": {
+      "count": 80,
+      "full_contract_pass_rate": 0.7875,
+      "passed": 63
+    },
+    "A3": {
+      "count": 80,
+      "full_contract_pass_rate": 0.8625,
+      "passed": 69
+    }
+  },
+  "run2_check_pass_rates": {
+    "balanced_fences": 0.975,
+    "blockquote_with_citation": 0.95,
+    "language_code_examples": 0.8791666666666667,
+    "numbered_list": 0.9666666666666667,
+    "outer_wrapper": 1.0,
+    "parse_success": 1.0,
+    "raw_markdown_source": 0.9333333333333333,
+    "table": 0.9833333333333333
+  },
+  "improvement": {
+    "base_to_run2_absolute": 0.7416666666666667,
+    "base_to_run2_relative_multiplier": 9.9,
+    "run1_to_run2_absolute": 0.5041666666666667,
+    "run1_to_run2_relative_multiplier": 2.571428571428571
+  },
+  "interpretation": "Targeted short contrastive SFT fixed the outer-wrapper decision without causing wrapper-policy regressions on A1 or A3. Remaining failures are primarily inner B3/B4 structure and occasional unbalanced generation."
+}

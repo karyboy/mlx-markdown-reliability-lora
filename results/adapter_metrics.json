@@ -1,0 +1,89 @@
+{
+  "by_axis_cell": {
+    "A1_B1": {
+      "count": 20,
+      "pass_rate": 0.9,
+      "passed": 18
+    },
+    "A1_B2": {
+      "count": 20,
+      "pass_rate": 0.55,
+      "passed": 11
+    },
+    "A1_B3": {
+      "count": 20,
+      "pass_rate": 0.25,
+      "passed": 5
+    },
+    "A1_B4": {
+      "count": 20,
+      "pass_rate": 0.2,
+      "passed": 4
+    },
+    "A2_B1": {
+      "count": 20,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A2_B2": {
+      "count": 20,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A2_B3": {
+      "count": 20,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A2_B4": {
+      "count": 20,
+      "pass_rate": 0.0,
+      "passed": 0
+    },
+    "A3_B1": {
+      "count": 20,
+      "pass_rate": 0.95,
+      "passed": 19
+    },
+    "A3_B2": {
+      "count": 20,
+      "pass_rate": 0.5,
+      "passed": 10
+    },
+    "A3_B3": {
+      "count": 20,
+      "pass_rate": 0.35,
+      "passed": 7
+    },
+    "A3_B4": {
+      "count": 20,
+      "pass_rate": 0.15,
+      "passed": 3
+    }
+  },
+  "check_pass_rates": {
+    "balanced_fences": 0.9708333333333333,
+    "blockquote_with_citation": 0.9166666666666666,
+    "language_code_examples": 0.6416666666666667,
+    "numbered_list": 0.9875,
+    "outer_wrapper": 0.6666666666666666,
+    "parse_success": 1.0,
+    "raw_markdown_source": 0.7916666666666666,
+    "table": 0.9833333333333333
+  },
+  "count": 240,
+  "failure_counts": {
+    "balanced_fences": 7,
+    "blockquote_with_citation": 20,
+    "language_code_examples": 86,
+    "numbered_list": 3,
+    "outer_wrapper": 80,
+    "raw_markdown_source": 50,
+    "table": 4
+  },
+  "full_structural_contract_pass_rate": 0.32083333333333336,
+  "scoring_method": {
+    "description": "Deterministic parser- and prompt-contract-based scoring written for this experiment. It does not assess arbitrary task-answer semantic correctness and is not LatentMD's authors' official evaluator.",
+    "name": "local_structural_contract_v1"
+  }
+}
