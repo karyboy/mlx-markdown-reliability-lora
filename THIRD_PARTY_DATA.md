@@ -5,6 +5,15 @@ structured content plans. The Markdown prompts, formatting contracts, rendered
 answers, corruptions, split manifest, and structural evaluator are original to
 this project.
 
+## External evaluation benchmark
+
+- Dataset: [LatentMD](https://huggingface.co/datasets/latentmd-neurips26/LatentMD)
+- Revision: `30fa204394b7214501ddc280a198c26fccf166df`
+- Use: source of the frozen, balanced 240-prompt external evaluation subset.
+- Training use: none; no benchmark prompt or response is used as an SFT target.
+- Evaluation code: this project uses its own structural evaluator, not the
+  dataset authors' official evaluator.
+
 ## MultiPL-E
 
 - Dataset: <https://huggingface.co/datasets/nuprl/MultiPL-E>

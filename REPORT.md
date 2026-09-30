@@ -10,8 +10,8 @@ The experiment starts from
 [`mlx-community/Qwen2.5-Coder-3B-Instruct-4bit`](https://huggingface.co/mlx-community/Qwen2.5-Coder-3B-Instruct-4bit),
 a 3.09-billion-parameter 4-bit model, and trains LoRA adapters locally with
 MLX-LM on an Apple Silicon Mac. Evaluation uses the same frozen 240-prompt
-LatentMD subset, prompt construction, deterministic generation settings, and
-local structural evaluator for every model version.
+external Markdown-contract benchmark, prompt construction, deterministic
+generation settings, and local structural evaluator for every model version.
 
 The final result is a change in full structural-contract pass rate from
 **8.33% to 82.50%**:
@@ -64,10 +64,10 @@ The following elements were frozen before comparing model versions:
 - maximum output length, temperature, top-p, and random seed;
 - deterministic structural evaluator and scoring rules.
 
-The external prompts come from the
+For provenance, the external prompts are a balanced subset derived from the
 [`latentmd-neurips26/LatentMD`](https://huggingface.co/datasets/latentmd-neurips26/LatentMD)
 repository at revision `30fa204394b7214501ddc280a198c26fccf166df`.
-They are used only for evaluation. No LatentMD prompt or model response is used
+They are used only for evaluation. No external prompt or model response is used
 as an SFT target.
 
 The project evaluator is intentionally transparent and local. It checks:
@@ -78,8 +78,8 @@ The project evaluator is intentionally transparent and local. It checks:
 - visible raw Markdown source;
 - tables, cited blockquotes, and numbered lists when requested.
 
-It is not the LatentMD authors' official evaluator and it does not execute or
-semantically grade programming solutions.
+It is not the upstream dataset authors' official evaluator and it does not
+execute or semantically grade programming solutions.
 
 ## 3. Training data construction
 
@@ -231,7 +231,7 @@ curriculum that directly contrasts the failed decision with nearby controls.
 - The evaluation contains 240 prompts, enough for a controlled portfolio
   experiment but not a comprehensive benchmark.
 - The local structural evaluator is deterministic but project-specific and is
-  not the official LatentMD evaluator.
+  not the upstream dataset's official evaluator.
 - Generated training targets are structurally verified; their programming
   prose is not a measure of solution correctness.
 - The model and adapter are optimized for MLX-LM on Apple Silicon. Other

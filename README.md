@@ -17,11 +17,12 @@ designed to run locally with MLX-LM on Apple Silicon.
   early-stopped at iteration 500 after training and validation loss converged.
 - Internal validation: 500 examples from 40 task families never present in
   training.
-- External evaluation: the same frozen 240-prompt LatentMD subset, prompt text,
-  chat template, generation settings, and local evaluator before and after SFT.
+- External evaluation: the same frozen 240-prompt Markdown-contract benchmark,
+  prompt text, chat template, generation settings, and local evaluator before
+  and after SFT.
 - Primary metric: full structural-contract pass rate. This is not an assessment
   of the semantic correctness of the programming solution.
-- No LatentMD prompt or model response is used as a training target.
+- No external benchmark prompt or model response is used as a training target.
 
 The base model scored **20/240 (8.33%)**. Broad Run 1 SFT reached **77/240
 (32.08%)**. The targeted Run 2 wrapper correction reached **198/240 (82.50%)**
@@ -61,7 +62,7 @@ Run 2 preserved the first adapter and continued from it using a separate
 controls, and 120 A3 controls; B1–B4 each receive 150 examples. It includes
 120 matched A1/A2 pairs where the content is identical and only the wrapper
 instruction and correct output differ. Eighty percent of the corpus uses direct
-generation with the exact LatentMD instruction wording.
+generation with the exact external-benchmark instruction wording.
 
 Targets were deliberately short so the opening and closing wrapper tokens
 contribute more strongly to token loss. The 120-example internal validation set
@@ -145,7 +146,16 @@ The token audit measured a maximum of 3,105 tokens in training and 2,518 in
 validation, so the configured 4,096-token training limit truncates zero records.
 Generated datasets are ignored by Git and can be rebuilt from pinned sources.
 
-## Frozen baseline
+## Evaluation provenance
+
+The frozen external prompts are a balanced 240-prompt subset derived from the
+[`latentmd-neurips26/LatentMD`](https://huggingface.co/datasets/latentmd-neurips26/LatentMD)
+dataset at a pinned revision. They are used strictly for evaluation—not as
+training examples or targets. The structural evaluator in this repository is
+our own transparent implementation and is not the dataset authors' official
+evaluator. See [`THIRD_PARTY_DATA.md`](THIRD_PARTY_DATA.md) for exact provenance.
+
+## Frozen external baseline
 
 Prepare the external subset, generate with the base model, and score it:
 
@@ -164,8 +174,8 @@ Prepare the external subset, generate with the base model, and score it:
 `score_latentmd.py` is a transparent local evaluator written for this project.
 It checks outer-wrapper policy, fence balance, language-specific code examples,
 raw Markdown source, tables, cited blockquotes, and numbered lists. It is not
-the LatentMD authors' official evaluator and does not judge arbitrary prose or
-code semantics.
+the upstream dataset authors' official evaluator and does not judge arbitrary
+prose or code semantics.
 
 ## Train the LoRA adapter
 
@@ -208,7 +218,7 @@ comparison results are stored under `results/`.
 ```text
 configs/                  frozen experiment and LoRA settings
 data/processed/           regenerated content plans and SFT JSONL (Git-ignored)
-data/latentmd/            frozen external prompt subset (Git-ignored)
+data/latentmd/            frozen external benchmark subset (Git-ignored)
 outputs/                  model responses and detailed scores (Git-ignored)
 results/                  compact manifests and publishable metrics
 scripts/                  preparation, audit, training, generation, and scoring
