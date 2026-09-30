@@ -1,0 +1,30 @@
+# Run 2: continue from the iteration-500 adapter on a short contrastive wrapper booster.
+model: mlx-community/Qwen2.5-Coder-3B-Instruct-4bit
+model_revision: 3dd939c621c08e5753d5b89f35a2642cd83b98ca
+train: true
+fine_tune_type: lora
+data: data/processed/wrapper_booster
+seed: 20260929
+
+num_layers: -1
+batch_size: 2
+grad_accumulation_steps: 4
+max_seq_length: 1280
+grad_checkpoint: true
+iters: 300
+
+optimizer: adam
+learning_rate: 2.0e-6
+mask_prompt: true
+
+steps_per_report: 10
+steps_per_eval: 50
+val_batches: -1
+save_every: 50
+adapter_path: adapters/qwen25-coder-3b-markdown-reliability-wrapper-run2
+resume_adapter_file: adapters/qwen25-coder-3b-markdown-reliability-lora/adapters.safetensors
+
+lora_parameters:
+  rank: 16
+  dropout: 0.05
+  scale: 32.0

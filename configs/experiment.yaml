@@ -1,0 +1,75 @@
+project_name: markdown-reliability-posttraining
+
+model:
+  id: mlx-community/Qwen2.5-Coder-3B-Instruct-4bit
+  revision: 3dd939c621c08e5753d5b89f35a2642cd83b98ca
+
+generation:
+  max_tokens: 1024
+  temperature: 0.0
+  top_p: 1.0
+  seed: 20260919
+
+pilot_data:
+  seed: 42
+  train_examples: 450
+  valid_examples: 50
+  generation_fraction: 0.60
+  repair_fraction: 0.30
+  transformation_fraction: 0.10
+
+latentmd:
+  hf_id: latentmd-neurips26/LatentMD
+  revision: 30fa204394b7214501ddc280a198c26fccf166df
+  data_file: prompts/priority/main_prompts.yaml
+  sample_seed: 20260919
+  samples_per_axis_cell: 20
+  expected_axis_cells: 12
+
+content_plans:
+  seed: 20260922
+  train_task_families: 160
+  valid_task_families: 40
+  multipl_e:
+    hf_id: nuprl/MultiPL-E
+    revision: 28441b6024e71d4a1c1c0f6bf171c935cd5a43f2
+    license: MIT
+    configs:
+      - mbpp-cpp
+      - mbpp-java
+      - mbpp-js
+      - mbpp-go
+      - mbpp-rs
+      - mbpp-rb
+      - mbpp-sh
+      - mbpp-ts
+  mbpp:
+    hf_id: google-research-datasets/mbpp
+    revision: 4bb6404fdc6cacfda99d4ac4205087b89d32030c
+    config: full
+    license: CC-BY-4.0
+
+final_sft_data:
+  seed: 20260923
+  train_examples: 5000
+  valid_examples: 500
+  generation_fraction: 0.60
+  repair_fraction: 0.30
+  transformation_fraction: 0.10
+  contract_axes:
+    outer_wrapper: [A1, A2, A3]
+    content_structure: [B1, B2, B3, B4]
+
+wrapper_booster:
+  seed: 20260929
+  train_examples: 600
+  valid_examples: 120
+  train_axis_counts:
+    A1: 120
+    A2: 360
+    A3: 120
+  valid_axis_counts:
+    A1: 24
+    A2: 72
+    A3: 24
+  content_structure: [B1, B2, B3, B4]

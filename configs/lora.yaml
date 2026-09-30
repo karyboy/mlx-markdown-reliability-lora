@@ -1,0 +1,35 @@
+# One-epoch MLX-LM LoRA SFT configuration for an M4 Pro with 48 GB memory.
+model: mlx-community/Qwen2.5-Coder-3B-Instruct-4bit
+# Recorded for reproducibility; scripts/train_lora.py resolves this exact snapshot.
+model_revision: 3dd939c621c08e5753d5b89f35a2642cd83b98ca
+train: true
+fine_tune_type: lora
+data: data/processed/final
+seed: 20260923
+
+# All 36 transformer blocks receive LoRA modules. The original ceiling was one
+# epoch (2,500 iterations), but the selected run was early-stopped at the first
+# saved checkpoint after validation loss reached approximately zero. Batch 2 x
+# 500 iterations presents 1,000 examples. Four micro-batches are accumulated
+# per optimizer update, for 125 updates and an effective batch size of 8.
+num_layers: -1
+batch_size: 2
+grad_accumulation_steps: 4
+max_seq_length: 4096
+grad_checkpoint: true
+iters: 500
+
+optimizer: adam
+learning_rate: 1.0e-5
+mask_prompt: true
+
+steps_per_report: 10
+steps_per_eval: 250
+val_batches: 25
+save_every: 500
+adapter_path: adapters/qwen25-coder-3b-markdown-reliability-lora
+
+lora_parameters:
+  rank: 16
+  dropout: 0.05
+  scale: 32.0
