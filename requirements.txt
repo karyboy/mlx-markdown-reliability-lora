@@ -1,0 +1,9 @@
+# Direct project dependencies verified in the parent Python 3.11 environment.
+mlx==0.32.2
+mlx-lm[train]==0.31.3
+datasets==5.0.1
+huggingface_hub==1.31.0
+markdown-it-py==4.2.0
+PyYAML==6.0.3
+tqdm==4.70.1
+transformers==5.17.0

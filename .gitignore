@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+data/latentmd/
+data/processed/
+outputs/
+external/
+adapters/
+
+!data/processed/.gitkeep
+!outputs/.gitkeep

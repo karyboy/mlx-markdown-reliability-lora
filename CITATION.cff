@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this experiment or adapter, please cite it as below."
+title: "Reliable Markdown Generation with Local LoRA SFT"
+type: software
+authors:
+  - family-names: Mehra
+    given-names: Karnesh
+year: 2026
+license: MIT
+repository-code: "https://github.com/karyboy/mlx-markdown-reliability-lora"
+url: "https://huggingface.co/logicless/qwen25-coder-3b-markdown-reliability-lora-mlx"
+keywords:
+  - MLX
+  - LoRA
+  - supervised fine-tuning
+  - Markdown
+  - Apple Silicon
