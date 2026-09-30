@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">Full structural contract pass rate across three model states</title>
+  <desc id="desc">Base model 8.33 percent, broad LoRA SFT Run 1 32.08 percent, targeted wrapper correction Run 2 82.50 percent.</desc>
+  <defs>
+    <linearGradient id="final" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="660" rx="28" fill="#f8fafc"/>
+  <text x="72" y="78" font-family="Inter,Arial,sans-serif" font-size="34" font-weight="700" fill="#0f172a">Full structural-contract pass rate</text>
+  <text x="72" y="114" font-family="Inter,Arial,sans-serif" font-size="18" fill="#475569">Same frozen 240-prompt external evaluation for every model state</text>
+  <line x1="120" y1="540" x2="1110" y2="540" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="120" y1="440" x2="1110" y2="440" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="120" y1="340" x2="1110" y2="340" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="120" y1="240" x2="1110" y2="240" stroke="#e2e8f0" stroke-width="1"/>
+  <line x1="120" y1="140" x2="1110" y2="140" stroke="#e2e8f0" stroke-width="1"/>
+  <g font-family="Inter,Arial,sans-serif" font-size="15" fill="#64748b" text-anchor="end">
+    <text x="104" y="545">0%</text><text x="104" y="445">25%</text><text x="104" y="345">50%</text><text x="104" y="245">75%</text><text x="104" y="145">100%</text>
+  </g>
+  <rect x="200" y="506.7" width="210" height="33.3" rx="10" fill="#94a3b8" filter="url(#shadow)"/>
+  <rect x="500" y="411.7" width="210" height="128.3" rx="10" fill="#6366f1" filter="url(#shadow)"/>
+  <rect x="800" y="210" width="210" height="330" rx="10" fill="url(#final)" filter="url(#shadow)"/>
+  <g font-family="Inter,Arial,sans-serif" text-anchor="middle">
+    <text x="305" y="485" font-size="27" font-weight="700" fill="#334155">8.33%</text>
+    <text x="605" y="389" font-size="27" font-weight="700" fill="#4338ca">32.08%</text>
+    <text x="905" y="184" font-size="32" font-weight="800" fill="#0f766e">82.50%</text>
+    <text x="305" y="580" font-size="18" font-weight="700" fill="#0f172a">Base model</text>
+    <text x="305" y="607" font-size="15" fill="#64748b">20 / 240</text>
+    <text x="605" y="580" font-size="18" font-weight="700" fill="#0f172a">Run 1</text>
+    <text x="605" y="607" font-size="15" fill="#64748b">Broad LoRA SFT · 77 / 240</text>
+    <text x="905" y="580" font-size="18" font-weight="700" fill="#0f172a">Run 2</text>
+    <text x="905" y="607" font-size="15" fill="#64748b">Targeted booster · 198 / 240</text>
+  </g>
+  <rect x="827" y="122" width="156" height="42" rx="21" fill="#ccfbf1"/>
+  <text x="905" y="149" font-family="Inter,Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#0f766e">+74.17 points</text>
+</svg>

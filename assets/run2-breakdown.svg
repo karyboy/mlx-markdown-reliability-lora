@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Run 2 full-contract accuracy by wrapper policy and content complexity</title>
+  <desc id="desc">Wrapper axes A1 82.5, A2 78.75, A3 86.25 percent. Content axes B1 95, B2 90, B3 80, B4 65 percent.</desc>
+  <rect width="1200" height="680" rx="28" fill="#f8fafc"/>
+  <text x="66" y="70" font-family="Inter,Arial,sans-serif" font-size="32" font-weight="700" fill="#0f172a">Run 2: where the remaining difficulty lives</text>
+  <text x="66" y="106" font-family="Inter,Arial,sans-serif" font-size="18" fill="#475569">Full-contract accuracy on the same frozen 240 prompts</text>
+  <text x="66" y="164" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#0f172a">Outer-wrapper policy</text>
+  <g font-family="Inter,Arial,sans-serif" font-size="16">
+    <text x="66" y="215" fill="#334155">A1 · prohibited</text><rect x="240" y="194" width="660" height="28" rx="14" fill="#e2e8f0"/><rect x="240" y="194" width="544.5" height="28" rx="14" fill="#14b8a6"/><text x="920" y="215" font-weight="700" fill="#0f766e">82.50%</text>
+    <text x="66" y="271" fill="#334155">A2 · required</text><rect x="240" y="250" width="660" height="28" rx="14" fill="#e2e8f0"/><rect x="240" y="250" width="519.75" height="28" rx="14" fill="#14b8a6"/><text x="920" y="271" font-weight="700" fill="#0f766e">78.75%</text>
+    <text x="66" y="327" fill="#334155">A3 · unspecified</text><rect x="240" y="306" width="660" height="28" rx="14" fill="#e2e8f0"/><rect x="240" y="306" width="569.25" height="28" rx="14" fill="#14b8a6"/><text x="920" y="327" font-weight="700" fill="#0f766e">86.25%</text>
+  </g>
+  <line x1="66" y1="378" x2="1134" y2="378" stroke="#cbd5e1"/>
+  <text x="66" y="424" font-family="Inter,Arial,sans-serif" font-size="19" font-weight="700" fill="#0f172a">Content complexity</text>
+  <g font-family="Inter,Arial,sans-serif" font-size="16">
+    <text x="66" y="475" fill="#334155">B1 · one code block</text><rect x="240" y="454" width="660" height="28" rx="14" fill="#e2e8f0"/><rect x="240" y="454" width="627" height="28" rx="14" fill="#6366f1"/><text x="920" y="475" font-weight="700" fill="#4338ca">95.00%</text>
+    <text x="66" y="525" fill="#334155">B2 · + raw source</text><rect x="240" y="504" width="660" height="28" rx="14" fill="#e2e8f0"/><rect x="240" y="504" width="594" height="28" rx="14" fill="#6366f1"/><text x="920" y="525" font-weight="700" fill="#4338ca">90.00%</text>
+    <text x="66" y="575" fill="#334155">B3 · multiple blocks</text><rect x="240" y="554" width="660" height="28" rx="14" fill="#e2e8f0"/><rect x="240" y="554" width="528" height="28" rx="14" fill="#6366f1"/><text x="920" y="575" font-weight="700" fill="#4338ca">80.00%</text>
+    <text x="66" y="625" fill="#334155">B4 · full composition</text><rect x="240" y="604" width="660" height="28" rx="14" fill="#e2e8f0"/><rect x="240" y="604" width="429" height="28" rx="14" fill="#6366f1"/><text x="920" y="625" font-weight="700" fill="#4338ca">65.00%</text>
+  </g>
+  <rect x="990" y="194" width="144" height="140" rx="18" fill="#ecfeff"/>
+  <text x="1062" y="228" font-family="Inter,Arial,sans-serif" font-size="14" text-anchor="middle" fill="#155e75">Wrapper check</text>
+  <text x="1062" y="270" font-family="Inter,Arial,sans-serif" font-size="30" font-weight="800" text-anchor="middle" fill="#0f766e">100%</text>
+  <text x="1062" y="301" font-family="Inter,Arial,sans-serif" font-size="13" text-anchor="middle" fill="#155e75">240 / 240</text>
+</svg>
