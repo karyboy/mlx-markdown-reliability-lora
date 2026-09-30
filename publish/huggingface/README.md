@@ -24,7 +24,7 @@ It is designed for the 4-bit Apple Silicon base model
 [`mlx-community/Qwen2.5-Coder-3B-Instruct-4bit`](https://huggingface.co/mlx-community/Qwen2.5-Coder-3B-Instruct-4bit)
 at revision `3dd939c621c08e5753d5b89f35a2642cd83b98ca`.
 
-On a frozen 240-prompt LatentMD evaluation subset, full structural-contract
+On a frozen 240-prompt external Markdown-contract benchmark, full structural-contract
 accuracy improved from **8.33%** for the base model to **32.08%** after broad
 Run 1 SFT and **82.50%** after the targeted Run 2 correction.
 
@@ -129,16 +129,24 @@ B3 80%, and B4 65%.
 The score is produced by this project's deterministic structural evaluator.
 It checks fence balance, wrapper policy, language-specific code examples, raw
 Markdown source, tables, cited blockquotes, and numbered lists. It is not the
-LatentMD authors' official evaluator and does not assess semantic correctness
-of arbitrary prose or code.
+upstream dataset authors' official evaluator and does not assess semantic
+correctness of arbitrary prose or code.
+
+## Evaluation provenance
+
+The frozen evaluation prompts are a balanced subset derived from
+[`latentmd-neurips26/LatentMD`](https://huggingface.co/datasets/latentmd-neurips26/LatentMD)
+at a pinned revision. They are evaluation-only and were never used as training
+examples or targets. The scorer is the project's own transparent structural
+evaluator.
 
 ## Training data
 
 The SFT examples are deterministically rendered and programmatically verified
-from task-family-disjoint MBPP and MultiPL-E content plans. The LatentMD prompts
-are evaluation-only and are never used as training targets. See the GitHub
-repository's data attribution and generation scripts for exact source
-revisions, licenses, splits, and leakage checks.
+from task-family-disjoint MBPP and MultiPL-E content plans. External benchmark
+prompts are never used as training targets. See the GitHub repository's data
+attribution and generation scripts for exact source revisions, licenses,
+splits, and leakage checks.
 
 ## Limitations
 
